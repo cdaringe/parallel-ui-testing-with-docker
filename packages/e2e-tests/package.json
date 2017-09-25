@@ -1,0 +1,36 @@
+{
+  "name": "e2e-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test/**/*.test.js",
+    "precommit": "run-p check lint test",
+    "check": "counsel check",
+    "lint": "standard",
+    "docs:clean": "jsdock clean",
+    "docs:build": "jsdock build",
+    "docs:publish": "jsdock publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "counsel": "^0.5.1",
+    "counsel-ruleset-nodelib": "^0.5.1",
+    "dockerode": "^2.5.1",
+    "husky": "^0.14.3",
+    "jsdock": "^1.0.3",
+    "npm-run-all": "^4.1.1",
+    "perish": "^1.0.1",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "docker-remote-api": "^4.4.1",
+    "freeport": "^1.0.5",
+    "pify": "^3.0.0",
+    "pouchy": "^12.2.2"
+  }
+}

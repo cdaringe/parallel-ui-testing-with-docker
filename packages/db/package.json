@@ -1,0 +1,22 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "description": "build a real, dummy database.",
+  "main": "index.js",
+  "scripts": {
+    "build": "docker build -t dummy_db",
+    "start": "pouchdb-server",
+    "migrate": "node src/migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "execa": "^0.8.0",
+    "perish": "^1.0.1",
+    "pouchdb-adapter-leveldb": "^6.3.4",
+    "pouchdb-server": "^2.3.7",
+    "pouchy": "^12.2.0"
+  }
+}
