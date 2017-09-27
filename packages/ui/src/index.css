@@ -3,3 +3,38 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+input[type='text'].lang-name {
+  text-align: right;
+  width: 125px;
+  background-color: #eee;
+  opacity: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+input[type='text'].lang-is {
+  min-width: 300px;
+  margin-right: 8px;
+}
+
+ul {
+  font-weight: bolder;
+  font-size: x-large;
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding-left: 1.3em;
+  margin-bottom: 0 !important;
+  list-style: none;
+}
+li:before {
+  content: "\f0e7";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}

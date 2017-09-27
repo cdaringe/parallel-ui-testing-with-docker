@@ -1,14 +1,9 @@
 const ava = require('ava').default
-const { containerSetup, containerTeardown } = require('./scaffolding/util')
+const { container } = require('./scaffolding/db')
 const Pouchy = require('pouchy')
 
-ava.beforeEach('prep docker', async t => {
-  await containerSetup(t.context)
-})
-
-ava.afterEach.always('clean docker', async t => {
-  containerTeardown(t.context)
-})
+ava.beforeEach('prep docker', t => container.setup(t.context))
+ava.afterEach.always('clean docker', t => container.teardown(t.context))
 
 ava('test db image', async t => {
   const dbPort = t.context.dbPort

@@ -16,7 +16,7 @@ async function migrate () {
   await db.save({ 'name': 'javascript', 'is': 'easy' })
   await db.save({ 'name': 'rust', 'is': 'safe' })
   await db.save({ 'name': 'erlang', 'is': 'interesting' })
-  await db.save({ 'name': 'java', 'is': 'nt cool anymore' })
+  await db.save({ 'name': 'java', 'is': 'not cool anymore' })
   console.log(`added: ${await db.all()}`)
   server.kill()
 }

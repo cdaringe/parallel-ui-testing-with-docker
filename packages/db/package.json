@@ -4,7 +4,7 @@
   "description": "build a real, dummy database.",
   "main": "index.js",
   "scripts": {
-    "build": "docker build -t dummy_db",
+    "build": "docker build -t dummy_db .",
     "start": "pouchdb-server",
     "migrate": "node src/migrate"
   },

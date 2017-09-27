@@ -31,6 +31,7 @@
     "docker-remote-api": "^4.4.1",
     "freeport": "^1.0.5",
     "pify": "^3.0.0",
-    "pouchy": "^12.2.2"
+    "pouchy": "^12.2.2",
+    "puppeteer": "^0.11.0"
   }
 }
