@@ -1,6 +1,6 @@
 # parallel ui testing with docker
 
-this project shows a recipe for effective parallel end-to-end testing with docker.
+this project shows a recipe for effective parallel end-to-end testing with docker.  more specifically, it is a sample of how one may launch a set of integration tests against a web application with state resets.  this README walks the user through the process, but interested parties are encouraged to study the tiny-amount-of code.
 
 the example presented uses a nodejs, react, couchdb/pouchdb, & docker stack.  the intent of the project is not to show or promote any of those tools, except docker.  regardless, i will highlight how some of these tools in the stack ease the task at hand .
 
