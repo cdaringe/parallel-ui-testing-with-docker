@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "docker build -t dummy_db .",
-    "start": "pouchdb-server",
+    "start": "pouchdb-server --level-backend sqldown",
     "migrate": "node src/migrate"
   },
   "keywords": [],
@@ -14,9 +14,12 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "execa": "^0.8.0",
+    "node-pre-gyp": "^0.6.38",
     "perish": "^1.0.1",
-    "pouchdb-adapter-leveldb": "^6.3.4",
-    "pouchdb-server": "^2.3.7",
-    "pouchy": "^12.2.0"
+    "pouchdb-adapter-node-websql": "^6.1.0",
+    "pouchdb-server": "2.3.7",
+    "pouchy": "^12.2.0",
+    "sqldown": "^2.1.0",
+    "sqlite3": "^3.1.12"
   }
 }

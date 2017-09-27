@@ -13,6 +13,7 @@ RUN apk --no-cache add --update \
     alpine-sdk
 RUN npm install
 COPY src/ /db/src
+COPY config.json /db/config.json
 RUN npm run migrate
 # CMD ["/tini", "--", "npm", "start", "--", "--host", "0.0.0.0"]
 CMD ["npm", "start", "--", "--host", "0.0.0.0"]
