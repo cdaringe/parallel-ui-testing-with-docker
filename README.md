@@ -5,7 +5,7 @@ this project shows a recipe for effective parallel end-to-end testing with docke
 the example presented uses a nodejs, react, couchdb/pouchdb, & docker stack.  the intent of the project is not to show or promote any of those tools, except docker.  regardless, i will highlight how some of these tools in the stack ease the task at hand .
 
 <p align="center">
-  <img src="img/demo.mov.gif" />
+  <img src="img/demo.mov.gif" /><br />
   <small><i>Watch docker containers and chrome instances come up and down as e2e tests run</i></small>
 </p>
 
@@ -63,12 +63,12 @@ the db image is very similar to [couchdb](http://docs.couchdb.org/), but uses an
   - you can see the docs and the "db" we migrated by going to: http://0.0.0.0:5984/_utils/#database/lang/_all_docs
 
 <p align="center">
-  <img width="500px" src="img/docker-db.png" />
+  <img width="400px" src="img/docker-db.png" /><br />
   <small><i>stdout from the db container</i></small>
 </p>
 
 <p align="center">
-  <img width="600px" src="img/fauxton.png" />
+  <img width="400px" src="img/fauxton.png" /><br />
   <small><i>the couchdb admin UI, fauxton</i></small>
 </p>
 
@@ -82,7 +82,7 @@ keep the db running.  we will have the UI use it momentarily.
 this should launch the ui.
 
 <p align="center">
-  <img width="500px" src="img/ui.png" />
+  <img width="400px" src="img/ui.png" /><br />
   <small><i>our dummy ui about programming languages</i></small>
 </p>
 
