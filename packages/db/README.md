@@ -1,18 +1,17 @@
 # db
 
-build a real, dummy database.
+this is the parallel-ui-test-with-docker database.
+
+it is a [dummy database & database server](https://github.com/pouchdb/pouchdb-server) hosts information about popular programming languages.
+
 
 ## usage
 
-`npm run build`
+- build
+  - start docker
+  - `npm run build`
 
-this will build an image called `dummy_db` with some premigrated data.
-
-you _could_ launch it with:
-
-```sh
-docker run -it -p 5984:5984 dummy_db
-```
-
-it's like couchdb, so you can query it w/ `curl`.  see couchdb docs for more.
+- run
+  - `docker run -it -p 5984:5984 dummy_db`
+  - follow the onscreen instructions for entering into the db admin area
 
