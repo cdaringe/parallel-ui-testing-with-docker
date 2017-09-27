@@ -4,6 +4,11 @@ this project shows a recipe for effective parallel end-to-end testing with docke
 
 the example presented uses a nodejs, react, couchdb/pouchdb, & docker stack.  the intent of the project is not to show or promote any of those tools, except docker.  regardless, i will highlight how some of these tools in this stack ease the game.
 
+<p align="center">
+  <img src="img/demo.mov.gif" />
+  <small>Watch our tests run, and docker containers and chrome instances come up and down</small>
+</p>
+
 ## problem
 
 end-to-end (e2e) browser tests often change the supporting backend system state.
