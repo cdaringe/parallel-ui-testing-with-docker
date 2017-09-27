@@ -2,16 +2,16 @@
 
 this project shows a recipe for effective parallel end-to-end testing with docker.
 
-the example presented uses a nodejs, react, couchdb/pouchdb, & docker stack.  the intent of the project is not to show or promote any of those tools, except docker.  regardless, i will highlight how some of these tools in this stack ease the game.
+the example presented uses a nodejs, react, couchdb/pouchdb, & docker stack.  the intent of the project is not to show or promote any of those tools, except docker.  regardless, i will highlight how some of these tools in the stack ease the task at hand .
 
 <p align="center">
   <img src="img/demo.mov.gif" />
-  <small><i>Watch our tests run, and docker containers and chrome instances come up and down</i></small>
+  <small><i>Watch docker containers and chrome instances come up and down as e2e tests run</i></small>
 </p>
 
 ## problem
 
-end-to-end (e2e) browser tests often change the supporting backend system state.
+end-to-end (e2e) browser tests often change their supporting backend systems' states.
 
 this includes, but is not limited to:
 
@@ -19,25 +19,25 @@ this includes, but is not limited to:
 - session managers
 - file systems
 
-for instance, if your app has users, hopefull you've written an e2e test to add a user to the system.
+for instance, if your app has users, hopefull you've written an e2e test to add a user to the system.  but adding a user changes the DB, and may impacts other tests, such as a test querying for all users.
 
-however, with the states of these systems dirtied during testing, repeatability is often voided, and browser tests become flaky and/or complicated.
+with the states of these systems dirtied during testing, repeatability is often voided, and browser tests become flaky and/or complicated.
 
 ## solution
 
 state resets.
 
-docker makes trashing your old systems and bringing up a new pristine copies _easy_.
+docker makes trashing your old system and bringing up a new pristine copies _easy_.
 
 ## example
 
-we will execute a series of database tests and web application ui tests, where each test get's its own copy of the database.
+we will execute a series of database tests and web application ui tests, where each test gets its own copy of the database.
 
 this project houses:
 
-- a database server image
-- a web application
-- a suite of e2e tests
+- a tiny database server image
+- a tiny web application
+- a tiny suite of e2e tests
 
 let's see how these work together.  the below steps are just to familiarize you with what the example suite _does_, exactly.
 
@@ -55,25 +55,38 @@ the db image is very similar to [couchdb](http://docs.couchdb.org/), but uses an
 - cd `packages/db`
 - `npm run build`
   - this pulls down a base nodejs docker image
-  - install pouchdb-server & it's deps
+  - install pouchdb-server & its deps
   - runs our hypothetical database migrations against this fresh db instance
 
 - finally, you can run a copy of the db
   - `docker run -it -p 5984:5984 dummy_db`
   - you can see the docs and the "db" we migrated by going to: http://0.0.0.0:5984/_utils/#database/lang/_all_docs
 
-![](img/docker-db.png)
+<p align="center">
+  <img width="500px" src="img/docker-db.png" />
+  <small><i>stdout from the db container</i></small>
+</p>
 
-![](img/fauxton.png)
+<p align="center">
+  <img width="600px" src="img/fauxton.png" />
+  <small><i>the couchdb admin UI, fauxton</i></small>
+</p>
 
-- keep the db running so the UI can use it, momentarily
+keep the db running.  we will have the UI use it momentarily.
 
 ### launch the UI
 
 - `cd packages/ui`
 - `npm start`
 
-this should launch the ui. there are two groups of data:
+this should launch the ui.
+
+<p align="center">
+  <img width="500px" src="img/ui.png" />
+  <small><i>our dummy ui about programming languages</i></small>
+</p>
+
+there are two groups of data:
 
 - data not in the db
 - data in the db
