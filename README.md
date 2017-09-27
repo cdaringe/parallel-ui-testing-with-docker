@@ -83,7 +83,7 @@ this should launch the ui.
 
 <p align="center">
   <img width="400px" src="img/ui.png" /><br />
-  <small><i>our dummy ui about programming languages</i></small>
+  <small><i>our dummy ui about programming languages. note: don't take these quips seriously ;)</i></small>
 </p>
 
 there are two groups of data:
@@ -102,10 +102,10 @@ clicking any of the submit buttons will add data to the database!  if you want t
 - `npm test`
 - observe:
   - various docker containers get spun up for each test
-  - various tests destructive things to the database, that were the db shared, would break other tests
+  - each test meddle with the database. note that if db was shared, tests would break
   - docker containers are stopped and removed on test exit
   - browsers are launched in parallel
-    - browser tests wire each browser session to their own database
+    - browser tests also wire each browser session to their own databases
   - **one of the browser tests intenionally runs a little slowly** so you can open the browser and observe.
     - ideally, you'd run these headlessly, and perhaps wire in some hooks to take screenshots on fail
 
