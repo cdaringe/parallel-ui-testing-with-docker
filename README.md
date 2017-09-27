@@ -6,7 +6,7 @@ the example presented uses a nodejs, react, couchdb/pouchdb, & docker stack.  th
 
 <p align="center">
   <img src="img/demo.mov.gif" />
-  <small>Watch our tests run, and docker containers and chrome instances come up and down</small>
+  <small><i>Watch our tests run, and docker containers and chrome instances come up and down</i></small>
 </p>
 
 ## problem
