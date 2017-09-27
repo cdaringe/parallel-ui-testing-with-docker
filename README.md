@@ -27,7 +27,7 @@ with the states of these systems dirtied during testing, repeatability is often 
 
 state resets.
 
-docker makes trashing your old system and bringing up a new pristine copies _easy_.
+docker makes trashing your old system and bringing up new pristine copies _easy_.
 
 ## example
 
