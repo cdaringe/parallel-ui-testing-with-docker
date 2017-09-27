@@ -7,7 +7,7 @@ const bb = require('bluebird')
 
 async function migrate () {
   let migrated = false
-  console.log('booting server')
+  console.log('booting server to accept migrations')
   const server = execa(
     'node',
     [

@@ -3,11 +3,11 @@ const db = require('./scaffolding/db')
 const browser = require('./scaffolding/browser')
 const bb = require('bluebird')
 
-ava.beforeEach('prep docker', async t => {
+ava.beforeEach('prep docker & browser', async t => {
   await db.container.setup(t.context)
   await browser.setup(t.context)
 })
-ava.afterEach.always('clean docker', async t => {
+ava.afterEach.always('clean docker & browser', async t => {
   await db.container.teardown(t.context)
   await browser.teardown(t.context)
 })

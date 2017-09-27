@@ -4,6 +4,13 @@ const puppeteer = require('puppeteer')
 const DISABLE_HEADLESS = !!process.env.DISABLE_HEADLESS
 
 module.exports = {
+  /**
+   * Launches a browser and navigates to our browser app.  Injects test run
+   * context into the app, such as the database port, so the app can run against
+   * the correct backend db.
+   * @param {*} ctx
+   * @returns {Promise}
+   */
   async setup (ctx) {
     // prep browser global context
     if (!ctx.dbPort) throw new Error('missing db port')
@@ -24,6 +31,11 @@ module.exports = {
     }, browserGlobals)
     Object.assign(ctx, { browser, page })
   },
+  /**
+   * Ends the test browser section
+   * @param {AvaContext} ctx
+   * @returns {Promise}
+   */
   teardown (ctx) {
     return ctx.browser.close()
   }

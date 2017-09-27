@@ -1,11 +1,11 @@
-const ava = require('ava').default
+const test = require('ava').default
 const { container } = require('./scaffolding/db')
 const Pouchy = require('pouchy')
 
-ava.beforeEach('prep docker', t => container.setup(t.context))
-ava.afterEach.always('clean docker', t => container.teardown(t.context))
+test.beforeEach('prep docker', t => container.setup(t.context))
+test.afterEach.always('clean docker', t => container.teardown(t.context))
 
-ava('test db image', async t => {
+test('that db image has baseline documents', async t => {
   const dbPort = t.context.dbPort
   const client = new Pouchy({ url: `http://localhost:${dbPort}/lang` })
   const docs = await client.all()

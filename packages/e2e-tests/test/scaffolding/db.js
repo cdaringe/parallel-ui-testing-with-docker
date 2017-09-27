@@ -8,6 +8,12 @@ const bb = require('bluebird')
 const containers = new Set()
 
 const container = {
+  /**
+   * Launches a new database container for a test.  Identifies a free port
+   * on the host system to bind the database's port to and boots it.
+   * @param {AvaContext} ctx
+   * @returns {Promise}
+   */
   async setup (ctx) {
     const port = await freeport()
     console.log(`booting container on port ${port}`)
@@ -24,6 +30,11 @@ const container = {
     ctx.dbContainer = container
     ctx.dbPort = port
   },
+  /**
+   * Stops and removes the container used for the test
+   * @param {AvaContext} ctx
+   * @returns {Promise}
+   */
   async teardown (ctx) {
     console.log(`removing container on port ${ctx.dbPort}`)
     const container = ctx.dbContainer
