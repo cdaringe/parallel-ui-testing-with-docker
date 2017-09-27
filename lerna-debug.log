@@ -1,0 +1,28 @@
+0 silly input []
+1 silly flags { _: [ 'bootstrap' ], args: [] }
+2 verbose rootPath /Users/cdieringer/node/parallel-ui-testing-with-docker
+3 info version 2.2.0
+4 silly existsSync /Users/cdieringer/node/parallel-ui-testing-with-docker/VERSION
+5 error EPACKAGES TypeError: Cannot read property 'some' of undefined
+5 error EPACKAGES     at Function.getPackages (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/PackageUtilities.js:102:42)
+5 error EPACKAGES     at Repository.buildPackageGraph (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Repository.js:86:51)
+5 error EPACKAGES     at BootstrapCommand.runPreparations (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:281:25)
+5 error EPACKAGES     at /Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:208:18
+5 error EPACKAGES     at Promise (<anonymous>)
+5 error EPACKAGES     at BootstrapCommand.run (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:196:14)
+5 error EPACKAGES     at Object.handler (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/commands/BootstrapCommand.js:59:83)
+5 error EPACKAGES     at Object.self.runCommand (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/lib/command.js:233:22)
+5 error EPACKAGES     at Object.Yargs.self._parseArgs (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/yargs.js:990:30)
+5 error EPACKAGES     at Object.Yargs.self.parse (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/yargs.js:532:23)
+5 error EPACKAGES  Errored while collecting packages and package graph { TypeError: Cannot read property 'some' of undefined
+5 error EPACKAGES     at Function.getPackages (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/PackageUtilities.js:102:42)
+5 error EPACKAGES     at Repository.buildPackageGraph (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Repository.js:86:51)
+5 error EPACKAGES     at BootstrapCommand.runPreparations (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:281:25)
+5 error EPACKAGES     at /Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:208:18
+5 error EPACKAGES     at Promise (<anonymous>)
+5 error EPACKAGES     at BootstrapCommand.run (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:196:14)
+5 error EPACKAGES     at Object.handler (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/commands/BootstrapCommand.js:59:83)
+5 error EPACKAGES     at Object.self.runCommand (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/lib/command.js:233:22)
+5 error EPACKAGES     at Object.Yargs.self._parseArgs (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/yargs.js:990:30)
+5 error EPACKAGES     at Object.Yargs.self.parse (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/yargs.js:532:23)
+5 error EPACKAGES   stack: 'TypeError: Cannot read property \'some\' of undefined\n    at Function.getPackages (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/PackageUtilities.js:102:42)\n    at Repository.buildPackageGraph (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Repository.js:86:51)\n    at BootstrapCommand.runPreparations (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:281:25)\n    at /Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:208:18\n    at Promise (<anonymous>)\n    at BootstrapCommand.run (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/Command.js:196:14)\n    at Object.handler (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/lerna/lib/commands/BootstrapCommand.js:59:83)\n    at Object.self.runCommand (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/lib/command.js:233:22)\n    at Object.Yargs.self._parseArgs (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/yargs.js:990:30)\n    at Object.Yargs.self.parse (/Users/cdieringer/node/parallel-ui-testing-with-docker/node_modules/yargs/yargs.js:532:23)' }
